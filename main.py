@@ -1,4 +1,4 @@
-from .conditions import check_first_condition, check_second_condition
+from conditions import check_first_condition, check_second_condition
 from utils import number_to_digits_list
 
 # third condition
