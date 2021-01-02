@@ -1,9 +1,9 @@
-from first_condition import check_first_condition
-from second_condition import check_second_condition
+from .conditions import check_first_condition, check_second_condition
 from utils import number_to_digits_list
 
-smallest_number = 37788
-highest_number = 7889999
+# third condition
+SMALLEST_POSSIBLE_PASSWORD = 37788
+HIGHEST_POSSIBLE_PASSWORD = 7889999
 
 
 def check_conditions(number_to_check: int) -> bool:
@@ -15,13 +15,14 @@ def check_conditions(number_to_check: int) -> bool:
 
 
 def main():
-    current_number = smallest_number
-    digit_counter = 0
-    while current_number <= highest_number:
+    current_number = SMALLEST_POSSIBLE_PASSWORD
+    possible_passwords_counter = 0
+    print("counting in progress...\n")
+    while current_number <= HIGHEST_POSSIBLE_PASSWORD:
         if check_conditions(current_number):
-            digit_counter += 1
+            possible_passwords_counter += 1
         current_number += 1
-    print(digit_counter)
+    print("You have to check {0} numbers".format(possible_passwords_counter))
 
 
 if __name__ == "__main__":
