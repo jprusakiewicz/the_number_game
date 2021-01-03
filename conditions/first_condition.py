@@ -1,16 +1,16 @@
 from typing import List
 
-from utils import group_by_identical_digits
+from .utils import group_by_identical_digits
 
 
-def check_first_condition(digits_list: List[int]) -> bool:
+def check_first_condition(digits: List[int]) -> bool:
     """
     There are at least two groups of identical adjacent digits (like ​11​ and ​33​ in ​1123345​)
-    :param digits_list:
+    :param digits:
     :return: bool
     """
     condition_counter = 0
-    grouped_digits = group_by_identical_digits(digits_list)
+    grouped_digits = group_by_identical_digits(digits)
     for group in grouped_digits:
         if len(group) > 1:
             condition_counter += 1
